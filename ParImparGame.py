@@ -81,24 +81,31 @@ while sair == False:
 
             system('cls')
 
-            user = int(
-                input(
-                    '\nVocê escolheu {}'
-                    '\nAgora escolha um número entre 1 e 10: '
-                    .format(decisao)
+            try:
+                user = int(
+                    input(
+                        '\nVocê escolheu {}'
+                        '\nAgora escolha um número entre 1 e 10: '
+                        .format(decisao)
+                    )
                 )
-            )
 
-            if user <= 0 or user > 10:
-                print('\nPor favor, insira um valor válido!')
-                sleep(1)
-                system('cls')
+                if user <= 0 or user > 10:
+                    print('\nPor favor, insira um valor válido!')
+                    sleep(1)
+                    system('cls')
+                    lance = False
+
+                else:
+                    sleep(1)
+                    print('\nVocê escolheu {}!'.format(user))
+                    lance = True
+                
+            except ValueError: #se tentar informar um tipo string, solicita que insira novamente
+                print('\nPor favor, informe um caractere válido e tente novamente!')
+                sleep(2)
                 lance = False
-
-            else:
-                sleep(1)
-                print('\nVocê escolheu {}!'.format(user))
-                lance = True
+                break
 
             computer = randint(1 , 10)
             sleep(1)
