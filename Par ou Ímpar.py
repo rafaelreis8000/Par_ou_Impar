@@ -139,12 +139,14 @@ while jogo == True:
 
         else:
             print(
-                '\nVocê escolheu {}, mas {} + {} não é {}!!!'
+                '\nVocê escolheu {}, mas {} + {} = {}...'
+                '\nNão é PAR!!!'
                 '\nJogue outra vez e tente me vencer!'
-                .format(decisao, user, computer, decisao)
+                .format(decisao, user, computer, user + computer)
             )
             sleep(3)
             jogo = True
 
-print('\n\nFIM!')
+print('\nFIM')
+exit()
 #Jogue par ou ímpar com o computador. O jogo só acaba quando a máquina perder! O total de tentativas deve ser mostrado
