@@ -121,10 +121,12 @@ while sair == False:
 
                 if tentativas == 1:
                     print('Você ganhou de mim de primeira!!!')
+                    sleep(2)
                     jogo = False
 
                 else:
                     print('{} tentativas foram necessárias para me vencer!'.format(tentativas))
+                    sleep(2)
                     jogo = False
 
             elif total % 2 == 1 and decisao == 'ÍMPAR':
